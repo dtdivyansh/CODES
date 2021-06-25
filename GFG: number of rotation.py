@@ -1,6 +1,6 @@
 class Solution:
-    def findKRotation(self,arr,  n):
-		i,j = 0,n-1
+    def findKRotation(self,arr,n):
+	i,j = 0,n-1
         ans = 100007
         res = 0
         while(i<=j):
