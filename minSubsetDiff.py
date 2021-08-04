@@ -9,14 +9,10 @@ def minDiffSubset(arr,n,s):
         return minDiffSubset(arr, n-1, s)
     
 def getMinDiff(arr,n,s):
-    m = 1000007
-    for i in range(s//2+1):
-        #print('sum',i)
-        if( minDiffSubset(arr, n-1, i) ):
-            cal = s - 2*i
-            #print(cal)
-            m = min(m,cal)     
-    return m
+     m = 10000007
+     for i in range(s//2,-1,-1):
+         if( minDiffSubset(arr, n-1,i )):
+             return s-2*i
 
 arr = [1,4,2,9]
 s = sum(arr)
